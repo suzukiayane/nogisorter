@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="src/assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="src/assets/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="og:site_name" content="Nogizaka46 Sorter">
+  <meta name="og:description" content="A simple website for sorting Nogizaka46 idols in a formatted list.">
+  <meta name="og:image" content="https://i.imgur.com/ojLl2nG.png">
+  <title>Nogizaka46 Sorter</title>
+
+  <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <script src="src/js/data.js"></script>
+  <script src="src/js/data/2019-05-02.js"></script>
+  <script src="src/js/html2canvas.min.js"></script>
+  <script src="src/js/lz-string.min.js"></script>
+  <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/main.js"></script>
+	
+	
+	<!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<!-- do i even need these
+	<!-- Latest compiled JavaScript --/>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	-->
+	
+</head>
+
+<body>
+	<div class="container">
+		<div class="row header mb-2">
+			<img class="col-12 px-0" src="src/assets/edit.png">
+		</div>
+		
+		<div class="row">
+			<div class="col sorter-body">
+				<!-- progress bar -->
+				
+				<div class="row sorter-progress">
+					<div class="progress-container mt-0 mb-1 pb-2 col d-none sorter-container">
+						<span class="progressbattle"></span>
+						<div class="progressbar">
+							<div class="progressfill">
+								<span class="progresstext m-auto"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row sorter text-center mb-3">
+					<div class="col-4 p-1 sorter-container ml-auto">
+						<!-- test code -->
+						<img class="left sort image px-0" src="src/assets/NogiLogoLnew.png">
+						<div class="left sort text "><p></p></div>
+						
+					</div>
+					<div class="col-4 px-0">
+						<div class="row h-100 mx-1">
+						
+							<div id="three-one" class="col-12 my-1 p-1 sorter-container">
+								<div class="d-flex justify-content-center align-items-center starting start button text">Click to Start!</div>
+								<div class="row align-items-center loading button text d-none mx-auto">
+									<div class="col-12">
+										<div class="row animated-circle mx-auto"></div>
+										<div class="row justify-content-center pt-3"><span>Loading...</span></div>
+									</div>
+								</div>
+								<div class="justify-content-center align-items-center sorting undo button text d-none">Undo</div>
+								<div class="justify-content-center align-items-center finished save button text d-none">Generate Result URL</div>
+							</div>
+							<div id="three-two" class="col-12 p-1 sorter-container d-none">
+								<div class="justify-content-center align-items-center starting load button text">Load&nbsp<span></span></div>
+								<div class="justify-content-center align-items-center sorting save button text d-none">Save Progress</div>
+								<div class="justify-content-center align-items-center finished getimg button text d-none">Generate Image</div>
+							</div>
+							<div id="three-three" class="col-12 my-1 p-1 sorter-container d-none">
+								<div class="justify-content-center align-items-center finished list button text d-none">Generate Text List</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-4 p-1 sorter-container mr-auto">
+						<img class="right sort image " src="src/assets/NogiLogoRnew.png">
+						<div class="right sort text "><p></p></div>
+					
+					</div>
+				</div>
+				
+				<div class="row sorter-options">
+					<div class="col options-container">
+						<div class="row options mx-auto"></div>
+					</div>
+				</div>
+				<div class="row sorter-result-options d-flex justify-content-center">
+					<div class="col-9 result-container">
+						<div class="image selector">Display Images on Result: </div>
+						<div class="results sorter-container row pl-1 pr-0 py-1"></div>
+						<div class="time taken"></div>
+					</div>
+				</div>
+				
+				<div class="row sorter-footer info">
+					<div class="col footer-container">
+						<hr class="row">
+						<div class="row justify-content-center">
+							<a class="mr-1" href="mailto:X.2manda@gmail.com">Contact</a> | <a class="mx-1" href="https://twitter.com/TsumandaMaaku">Twitter</a> | <a class="clearsave ml-1">Clear Save Data</a>
+						</div>
+						
+						<div class="row justify-content-center mt-2 mx-auto">
+							<p class="text-center mb-0">Sorter for Nogizaka46 members. Pick your sub-groups, and hit the Start button.</p>
+						</div>
+						
+						<div class="row justify-content-center mt-1 mx-auto">
+							<p class="text-center mb-0">Click on the member you like better from the two simply by clicking on their pictures.</p>
+						</div>
+
+						<!--
+						<p>Keyboard controls during sorting: H/LeftArrow: (pick left) J/DownArrow (undo) K/UpArrow (tie) L/RightArrow (pick right) S (save progress).</p>
+						<p>Before sorting: S/Enter (start sorting) L (load progress).</p>
+						<p>1/2/3 always correspond to the first/second/third buttons.</p>
+						-->
+
+						<p class="mt-3 text-center">Credits for the <a href="https://github.com/execfera/charasort/">source code</a>.</p>
+
+						<p class="mt-3 text-center">May 02, 2019 - Seventh version.</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+<!--
+<div class="container">
+
+    <div class="progress">
+        <span class="progressbattle"></span>
+        <div class="progressbar">
+            <div class="progressfill"><span class="progresstext"></span></div>
+        </div>
+    </div>
+
+    <div class="sorter">
+        <img src="src/assets/NogiLogoL.png" class="left sort image">
+
+        <div class="starting start button">Nogizaka46 Sorter<br><br>Click to Start!</div>
+        <div class="starting load button">Load <span></span></div>
+
+        <div class="loading button"><div></div><span>Loading...</span></div>
+
+        <div class="sorting tie button"></div>
+        <div class="sorting undo button">Undo</div>
+        <div class="sorting save button">Save Progress</div>
+
+        <div class="finished save button">Generate Result URL</div>
+        <div class="finished getimg button">Generate Image</div>
+        <div class="finished list button">Generate Text List</div>
+
+        <img src="src/assets/NogiLogoR.png" class="right sort image">
+
+        <div class="left sort text"><p></p></div>
+        <div class="right sort text"><p></p></div>
+    </div>
+
+    <div class="options"></div>
+    <div class="image selector">Display Images on Result: </div>
+    <div class="time taken"></div>
+    <div class="results"></div>
+
+    <div class="info">
+        <a href="mailto:X.2manda@gmail.com">Contact</a> | <a href="https://twitter.com/TsumandaMaaku">Twitter</a> | <a class="clearsave">Clear Save Data</a>
+        
+        <br><br>
+
+        <p>Sorter for Nogizaka46 members. Pick your sources, and hit the Start button.</p>
+        <p>Click on the member you like better from the two simply by clicking on their pictures.</p>
+
+        <br><br>
+
+        <!--
+        <p>Keyboard controls during sorting: H/LeftArrow: (pick left) J/DownArrow (undo) K/UpArrow (tie) L/RightArrow (pick right) S (save progress).</p>
+        <p>Before sorting: S/Enter (start sorting) L (load progress).</p>
+        <p>1/2/3 always correspond to the first/second/third buttons.</p>
+        --/> arrow ends here
+        
+        <br><br>
+
+        <p>Credits for the <a href="https://github.com/execfera/charasort/">source code</a>.</p>
+        
+        <br><br>
+
+        <p>May 02, 2019 - Seventh version.</p>
+    </div>
+</div>
+
+-->
+</body>
+
+</html>
