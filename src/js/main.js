@@ -274,6 +274,8 @@ function start() {
   $('.loading.button').addClass('d-flex');
   //document.querySelector('.progress-container').style.display = 'block';
   $('.progress-container').removeClass('d-none');
+  $('.sorter-options').addClass('d-none');
+  
   loading = true;
 
   preloadImages().then(() => {
@@ -489,11 +491,16 @@ function progressBar(indicator, percentage) {
  */
 function result(imageNum = 7) {
   //document.querySelectorAll('.finished.button').forEach(el => el.style.display = 'block');
+  //show result container
+  $('.sorter-result-options').removeClass('d-none');
+  $('.sorter-result-options').addClass('d-flex');
+  
   $('.sorting.button').removeClass('d-flex');
   $('.sorting.button').addClass('d-none');
   $('.finished.button').removeClass('d-none');
   $('.finished.button').addClass('d-flex');
   $('#three-three').removeClass('d-none');
+  
   
   document.querySelector('.image.selector').style.display = 'block';
   document.querySelector('.time.taken').style.display = 'block';
