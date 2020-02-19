@@ -517,7 +517,7 @@ function result(imageNum = 7) {
   const kami = (char, num) => {
 	const charName = reduceTextWidth(char.name, 'Arial 8px', 160);
 	const charTooltip = char.name !== charName ? char.name : '';
-	return `<div class="col-12"><div class="row"><div class="col-4 pl-0 pr-1"></div><div class="result kami col-4 pl-0 pr-1"><div class="row result-mcontainer mx-auto px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 px-0" title"${charTooltip}">${charName}</div></div></div></div></div><div class="col-4 pl-0 pr-1"></div></div></div>`;
+	return `<div class="col-12"><div class="row"><div class="col-4 pl-0 pr-1"></div><div class="result kami col-4 result-mcontainer pl-0 pr-1"><div class="row mx-auto px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 px-0 text-break" title"${charTooltip}">${charName}</div></div></div></div></div><div class="col-4 pl-0 pr-1"></div></div></div>`;
   }
   
   const imgRes = (char, num) => 
@@ -534,8 +534,7 @@ function result(imageNum = 7) {
 		
 	}*/
 	
-	
-    return `<div class="result image col-4 pl-0 pr-1"><div class="row result-mcontainer mx-auto mt-1 px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 px-0" title="${charTooltip}">${charName}</div></div></div></div>`;
+    return `<div class="result image col-4 result-mcontainer pl-0 pr-1"><div class="row mx-auto mt-1 px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 px-0 text-break" title="${charTooltip}">${charName}</div></div></div></div></div>`;
   }
   
   
@@ -543,13 +542,14 @@ function result(imageNum = 7) {
   {
 	const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
 	const charTooltip = char.name !== charName ? char.name : '';
-	return `<div class="result col-4 pl-0 pr-1"><div class="result-mcontainer row mx-auto mt-1 px-1"><div class="d-flex left col-3 align-items-center justify-content-end pl-0">${num}位</div><div class="d-flex right col-9 pr-0"><div class="px-0 d-flex col-12 align-items-center" title="${charTooltip}">${charName}</div></div></div></div>`;
+	return `<div class="result col-4 result-mcontainer pl-0 pr-1"><div class="row mx-auto mt-1 px-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="px-0 d-flex col-12 align-items-center text-break" title="${charTooltip}">${charName}</div></div></div></div>`;
   }
   const timeStr = `This sorter was completed on ${new Date(timestamp + timeTaken).toString()} and took ${msToReadableTime(timeTaken)}. <a href="${location.protocol}//${sorterURL}">Do another sorter?</a>`;
   
   let rankNum = 1;
   let tiedRankNum = 1;
   let imageDisplay = imageNum;
+  let finotpt = ``;
   
   const finalSortedIndexes = sortedIndexList[0].slice(0);
   const resultTable = document.querySelector('.results');
@@ -561,16 +561,27 @@ function result(imageNum = 7) {
   characterDataToSort.forEach((val, idx) => {
     const characterIndex = finalSortedIndexes[idx];
     const character = characterDataToSort[characterIndex];
+	console.log("does this loop");
     if (imageDisplay-- > 0) 
     {
 	  console.log(rankNum);
 	  if(rankNum === 1)
 	  {
-		  resultTable.insertAdjacentHTML('beforeend', kami(character, rankNum));
+		resultTable.insertAdjacentHTML('beforeend', kami(character, rankNum));
 	  }
       else
 	  {
-		resultTable.insertAdjacentHTML('beforeend', imgRes(character, rankNum));
+		if((rankNum-1) % 3 === 1)
+		{
+		  finotpt = `<div class="col-12"><div class="row">`;
+		}
+		finotpt += imgRes(character, rankNum);
+		if((rankNum-1) % 3 === 0)
+		{
+		  finotpt += `</div></div>`;
+		  resultTable.insertAdjacentHTML('beforeend', finotpt);
+		}
+		//resultTable.insertAdjacentHTML('beforeend', imgRes(character, rankNum));
 	  }
     } 
     else 
