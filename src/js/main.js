@@ -533,6 +533,8 @@ function result(imageNum = 7) {
 			break;
 		
 	}*/
+	
+	
     return `<div class="result image col-4 pl-0 pr-1"><div class="row result-mcontainer mx-auto mt-1 px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 px-0" title="${charTooltip}">${charName}</div></div></div></div>`;
   }
   
