@@ -405,6 +405,10 @@ a:visited {
 	{
 		font-size: 0.8rem;
 	}
+	.d-flex.left.col-3.justify-content-end.px-0
+	{
+		font-size: 0.9rem;
+	}
 }
 
 
