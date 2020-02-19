@@ -278,7 +278,7 @@ label:hover {
 .result-mcontainer
 {
 	border-radius: 5px;
-	background-color: #aaa;
+	background-color: #eee;
 	max-width: 100%;
 }
 
@@ -393,6 +393,20 @@ a:visited {
 {
 	max-width: 290px;
 }
+
+.d-flex.right.col-9.pl-1.pr-0
+{
+	align-items: flex-start;
+}
+
+@media(min-width: 320px)
+{
+	html
+	{
+		font-size: 0.8rem;
+	}
+}
+
 
 @media(min-width: 468px) 
 {
