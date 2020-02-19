@@ -57,13 +57,6 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Inoue Sayuri",
-    img: "qxWXFjp.jpg",
-    opts: {
-      groups: ["1gen", "inumen"]
-    }
-  },
-  {
     name: "Matsumura Sayuri",
     img: "Oyw8KOE.jpg",
     opts: {
@@ -126,6 +119,13 @@ dataSet[dataSetVersion].characterData = [
     img: "TqdTkM5.jpg",
     opts: {
       groups: ["1grad", "inumen"]
+    }
+  },
+  {
+    name: "Inoue Sayuri",
+    img: "qxWXFjp.jpg",
+    opts: {
+      groups: ["1gen", "inumen"]
     }
   },
   {
