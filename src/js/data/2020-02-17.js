@@ -125,7 +125,7 @@ dataSet[dataSetVersion].characterData = [
     name: "Inoue Sayuri",
     img: "qxWXFjp.jpg",
     opts: {
-      groups: ["1gen", "inumen"]
+      groups: ["1grad", "inumen"]
     }
   },
   {
