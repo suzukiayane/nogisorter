@@ -517,7 +517,7 @@ function result(imageNum = 7) {
   const kami = (char, num) => {
 	const charName = reduceTextWidth(char.name, 'Arial 8px', 160);
 	const charTooltip = char.name !== charName ? char.name : '';
-	return `<div class="col-12"><div class="row"><div class="col-4"></div><div class="result kami col-4 pl-0 pr-1"><div class="row result-mcontainer mx-auto px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end pl-0">${num}位</div><div class="d-flex right col-9 pr-0"><div class="row"><img class="col-12" src="${char.img}"><div class="d-flex col-12" title"${charTooltip}">${charName}</div><div class="col-4"></div></div></div></div></div></div>`;
+	return `<div class="col-12"><div class="row"><div class="col-4 pl-0 pr-1"></div><div class="result kami col-4 pl-0 pr-1"><div class="row result-mcontainer mx-auto px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 px-0" title"${charTooltip}">${charName}</div></div></div></div></div><div class="col-4 pl-0 pr-1"></div></div></div>`;
   }
   
   const imgRes = (char, num) => 
@@ -533,7 +533,7 @@ function result(imageNum = 7) {
 			break;
 		
 	}*/
-    return `<div class="result image col-4 pl-0 pr-1"><div class="row result-mcontainer mx-auto mt-1 px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end pl-0">${num}位</div><div class="d-flex right col-9 pr-0"><div class="row"><img class="col-12" src="${char.img}"><div class="d-flex col-12" title="${charTooltip}">${charName}</div></div></div></div>`;
+    return `<div class="result image col-4 pl-0 pr-1"><div class="row result-mcontainer mx-auto mt-1 px-1 pt-1"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 px-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 px-0" title="${charTooltip}">${charName}</div></div></div></div>`;
   }
   
   
