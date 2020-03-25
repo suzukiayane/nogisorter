@@ -521,11 +521,11 @@ function result(imageNum = 7) {
 	
 	if((num-1) % 3 === 0)
 	{
-		otpt = `<div class="col-12"><div class="row"><div class="col-4 px-0"></div><div class="result kami col-4 pl-0 pr-1 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title"${charTooltip}">${charName}</div></div></div></div></div><div class="col-4 pl-0 pr-1"></div></div></div>`;
+		otpt = `<div class="col-12"><div class="row"><div class="col-4 px-0"></div><div class="result kami col-4 pl-0 pr-1 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0 mx-xl-auto" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title"${charTooltip}">${charName}</div></div></div></div></div><div class="col-4 pl-0 pr-1"></div></div></div>`;
 	}
 	else
 	{
-		otpt = `<div class="col-12"><div class="row"><div class="col-4 pl-0 pr-1"></div><div class="result kami col-4 pl-0 pr-1 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title"${charTooltip}">${charName}</div></div></div></div></div><div class="col-4 pl-0 pr-1"></div></div></div>`;
+		otpt = `<div class="col-12"><div class="row"><div class="col-4 pl-0 pr-1"></div><div class="result kami col-4 pl-0 pr-1 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0 mx-xl-auto" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title"${charTooltip}">${charName}</div></div></div></div></div><div class="col-4 pl-0 pr-1"></div></div></div>`;
 	}
 	
 	return otpt;
@@ -547,11 +547,11 @@ function result(imageNum = 7) {
 	
 	if((num-1) % 3 === 0)
 	{
-		otpt = `<div class="result image col-4 px-0 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title="${charTooltip}">${charName}</div></div></div></div></div>`;
+		otpt = `<div class="result image col-4 px-0 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0 mx-xl-auto" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title="${charTooltip}">${charName}</div></div></div></div></div>`;
 	}
 	else
 	{
-		otpt = `<div class="result image col-4 pl-0 pr-1 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title="${charTooltip}">${charName}</div></div></div></div></div>`;
+		otpt = `<div class="result image col-4 pl-0 pr-1 pb-1 d-flex"><div class="flex-fill row mx-0 result-mcontainer p-1 border rounded-lg border-dark"><div class="d-flex left col-3 align-items-center justify-content-end px-0">${num}位</div><div class="d-flex right col-9 pl-1 pr-0"><div class="row mx-0"><img class="col-12 px-0 mx-xl-auto" src="${char.img}"><div class="d-flex col-12 pl-1 pr-0 text-break text-center justify-content-center" title="${charTooltip}">${charName}</div></div></div></div></div>`;
 	}
 	
     return otpt;
