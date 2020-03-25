@@ -288,56 +288,56 @@ dataSet[dataSetVersion].characterData = [
   //2nd gen
   {
     name: "Hori Miona",
-    img: "O6atJAI.jpg",
+    img: "3lChyuh.jpg",
     opts: {
       groups: ["2gen", "purin"]
     }
   },
   {
     name: "Ito Junna",
-    img: "51X2Qkz.jpg",
+    img: "lfbwyzB.jpg",
     opts: {
       groups: ["2gen", "suika"]
     }
   },
   {
     name: "Kitano Hinako",
-    img: "2BnKBlk.jpg",
+    img: "hWbd1xn.jpg",
     opts: {
       groups: ["2gen"]
     }
   },
   {
     name: "Shinuchi Mai",
-    img: "JWVIsbr.jpg",
+    img: "wMg7LYj.jpg",
     opts: {
       groups: ["2gen", "inumen"]
     }
   },
   {
     name: "Suzuki Ayane",
-    img: "rVdA5W7.jpg",
+    img: "iPVf6Ba.jpg",
     opts: {
       groups: ["2gen", "manatangun", "purin"]
     }
   },
   {
     name: "Terada Ranze",
-    img: "TXWGLST.jpg",
+    img: "69THMMx.jpg",
     opts: {
       groups: ["2gen", "sayuringogun"]
     }
   },
   {
     name: "Watanabe Miria",
-    img: "9PyFtNF.jpg",
+    img: "OUmN5Zh.jpg",
     opts: {
       groups: ["2gen", "manatangun", "purin"]
     }
   },
   {
     name: "Yamazaki Rena",
-    img: "robJHJK.jpg",
+    img: "4ijKWKG.jpg",
     opts: {
       groups: ["2gen"]
     }
@@ -367,7 +367,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Sasaki Kotoko",
-    img: "EJbMlci.jpg",
+    img: "vFlsdaZ.jpg",
     opts: {
       groups: ["2grad", "sayuringogun"]
     }
