@@ -580,6 +580,7 @@ function result(imageNum = 7) {
   let rankNum = 1;
   let tiedRankNum = 1;
   let imageDisplay = imageNum;
+  let imageComparator = imageNum;
   let finotpt = ``;
   
   const finalSortedIndexes = sortedIndexList[0].slice(0);
@@ -589,10 +590,11 @@ function result(imageNum = 7) {
   resultTable.innerHTML = '';
   timeElem.innerHTML = timeStr;
   
+  
+  const charCount = characterDataToSort.length;
   characterDataToSort.forEach((val, idx) => {
     const characterIndex = finalSortedIndexes[idx];
     const character = characterDataToSort[characterIndex];
-	console.log("does this loop");
     if (imageDisplay-- > 0) 
     {
 	  console.log(rankNum);
@@ -607,6 +609,10 @@ function result(imageNum = 7) {
 		  finotpt = `<div class="col-12"><div class="row">`;
 		}
 		finotpt += imgRes(character, rankNum);
+		if(charCount === rankNum && ((rankNum-1) % 3 === 1 || (rankNum-1) % 3 === 2))
+		{
+		  resultTable.insertAdjacentHTML('beforeend', finotpt);
+		}
 		if((rankNum-1) % 3 === 0)
 		{
 		  finotpt += `</div></div>`;
