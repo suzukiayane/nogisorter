@@ -107,19 +107,8 @@ function init() {
 
   document.querySelector('.image.selector').insertAdjacentElement('beforeend', document.createElement('select'));
 
-  /** Initialize image quantity selector for results. */
-  for (let i = 1; i <= 7; i++) {
-    const select = document.createElement('option');
-    select.value = i;
-    select.text = i;
-    if (i === 7) { select.selected = 'selected'; }
-    document.querySelector('.image.selector > select').insertAdjacentElement('beforeend', select);
-  }
+  //migrate test
 
-  document.querySelector('.image.selector > select').addEventListener('input', (e) => {
-    const imageNum = e.target.options[e.target.selectedIndex].value;
-    result(Number(imageNum));
-  });
 
   /** Show load button if save data exists. */
   if (storedSaveType) {
@@ -447,7 +436,46 @@ function pick(sortType) {
 
     progressBar(`Battle No. ${battleNo} - Completed!`, 100);
 
-    result();
+    /** Initialize image quantity selector for results. */
+	if (characterDataToSort.length < 7)
+	{
+	  for (let i = 1; i <= characterDataToSort.length+3; i+=3) {
+        const select = document.createElement('option');
+        select.value = i;
+        select.text = i;
+        if (i === 7) { select.selected = 'selected'; }
+        document.querySelector('.image.selector > select').insertAdjacentElement('beforeend', select);
+
+	    imageNum = 1;
+	    result(Number(imageNum));
+      }
+	}
+    else
+	{
+	  for (let i = 7; i <= characterDataToSort.length+3; i+=3) {
+        const select = document.createElement('option');
+        select.value = i;
+        select.text = i;
+        if (i === 7) { select.selected = 'selected'; }
+        document.querySelector('.image.selector > select').insertAdjacentElement('beforeend', select);
+        
+		result();
+	  }
+	}
+	
+    document.querySelector('.image.selector > select').addEventListener('input', (e) => {
+      const imageNum = e.target.options[e.target.selectedIndex].value;
+      result(Number(imageNum));
+    });	
+	
+	if(characterDataToSort.length < 7)
+	{
+	}
+	else
+	{
+	  
+	}
+    //result();
   } else {
     battleNo++;
     display();
