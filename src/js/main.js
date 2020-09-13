@@ -267,18 +267,24 @@ function start() {
   
   loading = true;
 
-  preloadImages().then(() => {
+  preloadImages().then(() => 
+	{
     loading = false;
     //document.querySelector('.loading.button').style.display = 'none';
-	$('.loading.button').removeClass('d-flex');
-	$('.loading.button').addClass('d-none');
-	//document.querySelector('.test-two').style.display = 'none';
+		$('.loading.button').removeClass('d-flex');
+		$('.loading.button').addClass('d-none');
+		//document.querySelector('.test-two').style.display = 'none';
     //document.querySelectorAll('.sorting.button').forEach(el => el.style.display = 'block');
-	$('#three-two').removeClass('d-none');
-	$('.sorting.button').removeClass('d-none');
-	$('.sorting.button').addClass('d-flex');
-    //document.querySelectorAll('.sort.text').forEach(el => el.style.display = 'block');
-	$('.sort-names').removeClass('d-none');
+		$('#three-two').removeClass('d-none');
+		$('.sorting.button').removeClass('d-none');
+		$('.sorting.button').addClass('d-flex');
+		//document.querySelectorAll('.sort.text').forEach(el => el.style.display = 'block');
+		$('.sort-names').removeClass('d-none');
+		//if selected is embed, display embed frameElement
+		if(document.getElementById(`cbgroup-sembed`).checked)
+		{
+			$('.spotify').removeClass('d-none');
+		}
     display();
   });
 }
@@ -292,7 +298,7 @@ function display() {
   const rightChar       = characterDataToSort[rightCharIndex];
 
   const charNameDisp = name => {
-    const charName = reduceTextWidth(name, 'Arial 12.8px', 220);
+    const charName = reduceTextWidth(name, 'Arial 12px', 500);
     const charTooltip = name !== charName ? name : '';
     return `<p title="${charTooltip}">${charName}</p>`;
   };
@@ -300,12 +306,13 @@ function display() {
   progressBar(`Battle No. ${battleNo}`, percent);
 
   document.querySelector('.left.sort.image').src = leftChar.img;
-  document.querySelector('.right.sort.image').src = rightChar.img;
-
-  
+  document.querySelector('.right.sort.image').src = rightChar.img;  
 
   document.querySelector('.left.sort.text').innerHTML = charNameDisp(leftChar.name);
   document.querySelector('.right.sort.text').innerHTML = charNameDisp(rightChar.name);
+	
+	document.querySelector('.left.spotify').src = leftChar.song;
+	document.querySelector('.right.spotify').src = rightChar.song;
 
   /** Autopick if choice has been given. */
   if (choices.length !== battleNo - 1) {
@@ -544,7 +551,7 @@ function result(imageNum = 7) {
   //this thing is a mess
   const kami = (char, num) => {
 	let otpt = ``;
-	const charName = reduceTextWidth(char.name, 'Arial 8px', 160);
+	const charName = reduceTextWidth(char.name, 'Arial 8px', 500);
 	const charTooltip = char.name !== charName ? char.name : '';
 	
 	if((num-1) % 3 === 0)
@@ -562,7 +569,7 @@ function result(imageNum = 7) {
   const imgRes = (char, num) => 
   {
 	let otpt = ``;
-    const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
+    const charName = reduceTextWidth(char.name, 'Arial 12px', 500);
     const charTooltip = char.name !== charName ? char.name : '';
 	
 	/*switch(${num})
@@ -589,7 +596,7 @@ function result(imageNum = 7) {
   const res = (char, num) =>
   {
 	let otpt = ``;
-	const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
+	const charName = reduceTextWidth(char.name, 'Arial 12px', 500);
 	const charTooltip = char.name !== charName ? char.name : '';
 	
 	if((num-1) % 3 === 0)
@@ -625,7 +632,7 @@ function result(imageNum = 7) {
     const character = characterDataToSort[characterIndex];
     if (imageDisplay-- > 0) 
     {
-	  console.log(rankNum);
+	  //console.log(rankNum);
 	  if(rankNum === 1)
 	  {
 		resultTable.insertAdjacentHTML('beforeend', kami(character, rankNum));
@@ -844,10 +851,10 @@ function setLatestDataset() {
 function populateOptions() {
   const optList = document.querySelector('.options');
   const optInsert = (name, id, tooltip, checked = true, disabled = false) => {
-    return `<div class="col-6 col-md-4 col-xl-3"><label title="${tooltip?tooltip:name}"><input id="cb-${id}" type="checkbox" ${checked?'checked':''} ${disabled?'disabled':''}> ${name}</label></div>`;
+    return `<div class="col-6 col-md-4 col-xl-3"><label title="${tooltip?tooltip:name}"><input id="cb-${id}" name="${id.slice(0, 6)}" type="checkbox" ${checked?'checked':''} ${disabled?'disabled':''} > ${name}</label></div>`;
   };
   const optInsertLarge = (name, id, tooltip, checked = true) => {
-    return `<div class="col-12 large option text-center"><label title="${tooltip?tooltip:name}"><input id="cbgroup-${id}" type="checkbox" ${checked?'checked':''}> ${name}</label></div>`;
+    return `<div class="col-12 large option text-center"><label title="${tooltip?tooltip:name}"><input id="cbgroup-${id}" name="rb" type="radio" ${checked?'checked':''}> ${name}</label></div>`;
   };
 
   /** Clear out any previous options. */
@@ -862,14 +869,72 @@ function populateOptions() {
       });
       optList.insertAdjacentHTML('beforeend', '<hr>');
 
-      const groupbox = document.getElementById(`cbgroup-${opt.key}`);
-
-      groupbox.parentElement.addEventListener('click', () => {
-        opt.sub.forEach((subopt, subindex) => {
-          document.getElementById(`cb-${opt.key}-${subindex}`).disabled = !groupbox.checked;
+    const groupbox = document.getElementById(`cbgroup-${opt.key}`);
+	  const groups = document.getElementsByName(`groups`);
+	  const single = document.getElementsByName(`single`);
+		const sembed = document.getElementsByName(`sembed`);
+	  const indivd = document.getElementsByName(`indivd`);
+	  groupbox.addEventListener('click', () => {
+		  
+		if(document.getElementById(`cbgroup-groups`).checked)
+		{
+		  //test code
+		  groups.forEach(input => input.disabled = false);
+			sembed.forEach(input => input.disabled = true);
+		  single.forEach(input => input.disabled = true);
+		  indivd.forEach(input => input.disabled = true);
+		}
+		else if(document.getElementById(`cbgroup-single`).checked)
+		{
+		  //document.getElementsByName(`single`).disabled = false;
+		  //document.getElementsByName(`groups`).disabled = true;
+		  
+		  groups.forEach(input => input.disabled = true);
+			sembed.forEach(input => input.disabled = true);
+		  single.forEach(input => input.disabled = false);
+		  indivd.forEach(input => input.disabled = true);
+		}
+		else if(document.getElementById(`cbgroup-sembed`).checked)
+		{
+		  groups.forEach(input => input.disabled = true);
+			sembed.forEach(input => input.disabled = false);
+		  single.forEach(input => input.disabled = true);
+		  indivd.forEach(input => input.disabled = true);
+		}
+		else if(document.getElementById(`cbgroup-indivd`).checked)
+		{
+		  //document.getElementsByName(`single`).disabled = false;
+		  //document.getElementsByName(`groups`).disabled = true;
+		  
+		  groups.forEach(input => input.disabled = true);
+			sembed.forEach(input => input.disabled = true);
+		  single.forEach(input => input.disabled = true);
+		  indivd.forEach(input => input.disabled = false);
+		}
+		/*
+		if(groupbox.id === document.getElementById(`cbgroup-groups`).id)
+		{
+		  console.log("YES");
+		  opt.sub.forEach((subopt, subindex) => {
+          document.getElementById(`cb-groups-${subindex}`).disabled = !groupbox.checked;
+		  document.getElementById(`cb-groups-${subindex}`).checked = false;
           if (groupbox.checked) { document.getElementById(`cb-${opt.key}-${subindex}`).checked = true; }
-        });
+          
+		  })
+		}
+		else
+		{
+		  console.log("NO");
+		  opt.sub.forEach((subopt, subindex) => {
+          document.getElementById(`cb-single-${subindex}`).disabled = !groupbox.checked;})
+		}
+		console.log(groupbox.id);
+		console.log("the id of groups is " + document.getElementById(`cbgroup-groups`).id);
+		console.log("the id of singles is " + document.getElementById(`cbgroup-single`).id);
+        */
       });
+	  
+	  
     } else {
       optList.insertAdjacentHTML('beforeend', optInsert(opt.name, opt.key, opt.tooltip, opt.checked));
     }
