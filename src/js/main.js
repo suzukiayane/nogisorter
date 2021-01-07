@@ -281,10 +281,12 @@ function start() {
 		//document.querySelectorAll('.sort.text').forEach(el => el.style.display = 'block');
 		$('.sort-names').removeClass('d-none');
 		//if selected is embed, display embed frameElement
+		/*
 		if(document.getElementById(`cbgroup-sembed`).checked)
 		{
 			$('.spotify').removeClass('d-none');
 		}
+		*/
     display();
   });
 }
@@ -872,7 +874,7 @@ function populateOptions() {
     const groupbox = document.getElementById(`cbgroup-${opt.key}`);
 	  const groups = document.getElementsByName(`groups`);
 	  const single = document.getElementsByName(`single`);
-		const sembed = document.getElementsByName(`sembed`);
+	  const sembed = document.getElementsByName(`sembed`);
 	  const indivd = document.getElementsByName(`indivd`);
 	  groupbox.addEventListener('click', () => {
 		  
@@ -880,7 +882,7 @@ function populateOptions() {
 		{
 		  //test code
 		  groups.forEach(input => input.disabled = false);
-			sembed.forEach(input => input.disabled = true);
+		  sembed.forEach(input => input.disabled = true);
 		  single.forEach(input => input.disabled = true);
 		  indivd.forEach(input => input.disabled = true);
 		}
@@ -890,14 +892,14 @@ function populateOptions() {
 		  //document.getElementsByName(`groups`).disabled = true;
 		  
 		  groups.forEach(input => input.disabled = true);
-			sembed.forEach(input => input.disabled = true);
+		  sembed.forEach(input => input.disabled = true);
 		  single.forEach(input => input.disabled = false);
 		  indivd.forEach(input => input.disabled = true);
 		}
 		else if(document.getElementById(`cbgroup-sembed`).checked)
 		{
 		  groups.forEach(input => input.disabled = true);
-			sembed.forEach(input => input.disabled = false);
+		  sembed.forEach(input => input.disabled = false);
 		  single.forEach(input => input.disabled = true);
 		  indivd.forEach(input => input.disabled = true);
 		}
@@ -907,7 +909,7 @@ function populateOptions() {
 		  //document.getElementsByName(`groups`).disabled = true;
 		  
 		  groups.forEach(input => input.disabled = true);
-			sembed.forEach(input => input.disabled = true);
+		  sembed.forEach(input => input.disabled = true);
 		  single.forEach(input => input.disabled = true);
 		  indivd.forEach(input => input.disabled = false);
 		}
