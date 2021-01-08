@@ -116,14 +116,6 @@ dataSet[dataSetVersion].characterData = [
 		song: ""
   },
   {
-    name: "Nakada Kana",
-    img: "0C0K7WA.jpg",
-    opts: {
-      groups: ["1gen"]
-    },
-		song: ""
-  },
-  {
     name: "Saito Asuka",
     img: "ta5SDZT.jpg",
     opts: {
@@ -210,6 +202,14 @@ dataSet[dataSetVersion].characterData = [
     img: "3jITX02.jpg",
     opts: {
       groups: ["1grad", "tulip"]
+    },
+		song: ""
+  },
+  {
+    name: "Nakada Kana",
+    img: "0C0K7WA.jpg",
+    opts: {
+      groups: ["1grad"]
     },
 		song: ""
   },
