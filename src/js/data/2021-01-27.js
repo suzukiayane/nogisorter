@@ -1,4 +1,4 @@
-dataSetVersion = "2021-01-07"; // Change this when creating a new data set version. YYYY-MM-DD format.
+dataSetVersion = "2021-01-27"; // Change this when creating a new data set version. YYYY-MM-DD format.
 dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
@@ -75,7 +75,7 @@ dataSet[dataSetVersion].characterData = [
   //1st gens
   {
     name: "Akimoto Manatsu",
-    img: "TtlZWrj.jpg",
+    img: "qv0zHR6.jpg",
     opts: {
       groups: ["1gen", "manatangun"],
 	  single: ["1gen", "manatangun"]
@@ -84,7 +84,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Higuchi Hina",
-    img: "lVDnfr8.jpg",
+    img: "WqkVH64.jpg",
     opts: {
       groups: ["1gen"],
 	  single: ["1gen"]
@@ -93,7 +93,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Hoshino Minami",
-    img: "HQv084f.jpg",
+    img: "L5hFDKE.jpg",
     opts: {
       groups: ["1gen"]
     },
@@ -101,7 +101,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Ikuta Erika",
-    img: "BDUhPQT.jpg",
+    img: "1F58xZl.jpg",
     opts: {
       groups: ["1gen", "tulip"]
     },
@@ -109,7 +109,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Matsumura Sayuri",
-    img: "wQjdmCX.jpg",
+    img: "tveerMa.jpg",
     opts: {
       groups: ["1gen", "sayuringogun"]
     },
@@ -117,7 +117,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Saito Asuka",
-    img: "ta5SDZT.jpg",
+    img: "We4APOq.jpg",
     opts: {
       groups: ["1gen"]
     },
@@ -125,7 +125,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Takayama Kazumi",
-    img: "nieq7Rz.jpg",
+    img: "ymOtgE0.jpg",
     opts: {
       groups: ["1gen", "tulip"]
     },
@@ -133,7 +133,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Wada Maaya",
-    img: "yF2YTVz.jpg",
+    img: "KihD642.jpg",
     opts: {
       groups: ["1gen", "tulip"]
     },
@@ -371,7 +371,7 @@ dataSet[dataSetVersion].characterData = [
   //2nd gen
   {
     name: "Hori Miona",
-    img: "3lChyuh.jpg",
+    img: "17XEpdp.jpg",
     opts: {
       groups: ["2gen", "purin"]
     },
@@ -379,7 +379,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Ito Junna",
-    img: "lfbwyzB.jpg",
+    img: "tkSePMV.jpg",
     opts: {
       groups: ["2gen", "suika"]
     },
@@ -387,7 +387,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Kitano Hinako",
-    img: "hWbd1xn.jpg",
+    img: "CkZQxzU.jpg",
     opts: {
       groups: ["2gen"]
     },
@@ -395,7 +395,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Shinuchi Mai",
-    img: "wMg7LYj.jpg",
+    img: "TKLjDTH.jpg",
     opts: {
       groups: ["2gen", "inumen"]
     },
@@ -403,7 +403,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Suzuki Ayane",
-    img: "iPVf6Ba.jpg",
+    img: "NSN14N3.jpg",
     opts: {
       groups: ["2gen", "manatangun", "purin"],
 	  indivd: ["ayamine"]
@@ -412,7 +412,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Terada Ranze",
-    img: "69THMMx.jpg",
+    img: "SOUusGQ.jpg",
     opts: {
       groups: ["2gen", "sayuringogun"]
     },
@@ -420,7 +420,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Watanabe Miria",
-    img: "OUmN5Zh.jpg",
+    img: "b00wabt.jpg",
     opts: {
       groups: ["2gen", "manatangun", "purin"]
     },
@@ -428,7 +428,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Yamazaki Rena",
-    img: "4ijKWKG.jpg",
+    img: "hi41II0.jpg",
     opts: {
       groups: ["2gen"]
     },
@@ -488,7 +488,7 @@ dataSet[dataSetVersion].characterData = [
   
   {
     name: "Ito Riria",
-    img: "TD4crPl.jpg",
+    img: "NdIVxOO.jpg",
     opts: {
       groups: ["3gen"]
     },
@@ -496,7 +496,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Iwamoto Renka",
-    img: "9uxbPVo.jpg",
+    img: "YtPzf6G.jpg",
     opts: {
       groups: ["3gen"]
     },
@@ -504,7 +504,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Kubo Shiori",
-    img: "V1GzS1K.jpg",
+    img: "gdi6tuW.jpg",
     opts: {
       groups: ["3gen", "imouto"]
     },
@@ -512,7 +512,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Mukai Hazuki",
-    img: "2y1qSM0.jpg",
+    img: "XGhfhUf.jpg",
     opts: {
       groups: ["3gen"]
     },
@@ -520,7 +520,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Nakamura Reno",
-    img: "jUO2LqQ.jpg",
+    img: "eoNfMsu.jpg",
     opts: {
       groups: ["3gen"]
     },
@@ -528,7 +528,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Ozono Momoko",
-    img: "aUpgcQY.jpg",
+    img: "klNsoql.jpg",
     opts: {
       groups: ["3gen", "imouto"]
     },
@@ -536,7 +536,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Sakaguchi Tamami",
-    img: "WQSsIiD.jpg",
+    img: "r79EDd7.jpg",
     opts: {
       groups: ["3gen", "wakagun"]
     },
@@ -544,7 +544,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Sato Kaede",
-    img: "SPLiKbx.jpg",
+    img: "2GfNsyh.jpg",
     opts: {
       groups: ["3gen"]
     },
@@ -552,7 +552,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Umezawa Minami",
-    img: "XRCGXke.jpg",
+    img: "Z2XhwfB.jpg",
     opts: {
       groups: ["3gen", "wakagun"]
     },
@@ -560,7 +560,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Yamashita Mizuki",
-    img: "nL6M36p.jpg",
+    img: "okjIScc.jpg",
     opts: {
       groups: ["3gen", "imouto", "wakagun"]
     },
@@ -568,7 +568,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Yoda Yuki",
-    img: "GOzlrBU.jpg",
+    img: "LfH34T3.jpg",
     opts: {
       groups: ["3gen", "imouto"]
     },
@@ -576,7 +576,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Yoshida Ayano Christie",
-    img: "uF2XxAD.jpg",
+    img: "HkgGPM4.jpg",
     opts: {
       groups: ["3gen"]
     },
@@ -586,7 +586,7 @@ dataSet[dataSetVersion].characterData = [
   //4th gen
   {
     name: "Endo Sakura",
-    img: "n80nEcf.jpg",
+    img: "IXaNKRi.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -594,7 +594,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Hayakawa Seira",
-    img: "hhlwXpq.jpg",
+    img: "hE1VM5w.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -602,7 +602,7 @@ dataSet[dataSetVersion].characterData = [
   },  
   {
     name: "Kakehashi Sayaka",
-    img: "bdEk1dZ.jpg",
+    img: "ne0ycMq.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -610,7 +610,7 @@ dataSet[dataSetVersion].characterData = [
   },  
   {
     name: "Kaki Haruka",
-    img: "KBzmo6T.jpg",
+    img: "PCsKniX.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -618,7 +618,7 @@ dataSet[dataSetVersion].characterData = [
   },  
   {
     name: "Kanagawa Saya",
-    img: "fDg20L2.jpg",
+    img: "4nTCdDZ.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -626,7 +626,7 @@ dataSet[dataSetVersion].characterData = [
   },  
   {
     name: "Kitagawa Yuri",
-    img: "VRvB2BN.jpg",
+    img: "wqP2Vwy.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -634,7 +634,7 @@ dataSet[dataSetVersion].characterData = [
   },  
   {
     name: "Seimiya Rei",
-    img: "4xpHqmz.jpg",
+    img: "pNoLdFy.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -642,7 +642,7 @@ dataSet[dataSetVersion].characterData = [
   },  
   {
     name: "Shibata Yuna",
-    img: "gZ8AXqJ.jpg",
+    img: "ienIiue.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -650,7 +650,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Tamura Mayu",
-    img: "DBpNl01.jpg",
+    img: "CMFr63U.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -658,7 +658,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Tsutsui Ayame",
-    img: "K0PQixs.jpg",
+    img: "gNnIT7n.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -666,7 +666,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Yakubo Mio",
-    img: "uP3u6OR.jpg",
+    img: "NKyKsKx.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -675,8 +675,16 @@ dataSet[dataSetVersion].characterData = [
   
   //4.5 gen
   {
+    name: "Hayashi Runa",
+    img: "0U1dDwo.jpg",
+    opts: {
+      groups: ["4gen"]
+    },
+		song: ""
+  },
+  {
     name: "Kuromi Haruka",
-    img: "0X4Tpi5.jpg",
+    img: "j31fvfy.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -684,15 +692,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Matsuo Miyu",
-    img: "j0GQ7QC.jpg",
-    opts: {
-      groups: ["4gen"]
-    },
-		song: ""
-  },
-  {
-    name: "Yumiki Nao",
-    img: "OhmMLbX.jpg",
+    img: "5jO9IOL.jpg",
     opts: {
       groups: ["4gen"]
     },
@@ -700,15 +700,15 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Sato Rika",
-    img: "wvAV2Ui.jpg",
+    img: "MQ9Fyv4.jpg",
     opts: {
       groups: ["4gen"]
     },
 		song: ""
   },
   {
-    name: "Hayashi Runa",
-    img: "aegBOCj.jpg",
+    name: "Yumiki Nao",
+    img: "wkBW15m.jpg",
     opts: {
       groups: ["4gen"]
     },
